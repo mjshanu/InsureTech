@@ -21,7 +21,9 @@ import Switch from '@mui/material/Switch';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
-
+import Addquotes from './Addquotes';
+import { Link} from "react-router-dom";
+import { Navbar } from './Navbar/Navbar';
 function createData(name, calories, fat, carbs, protein) {
   return {
     name,
@@ -288,6 +290,8 @@ export default function Entries() {
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
         <EnhancedTableToolbar numSelected={selected.length} />
+        <Link to="/Addquotes">Add Quotes</Link>
+       
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}
