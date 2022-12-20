@@ -14,6 +14,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
+import { Button } from '@mui/material';
+
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -21,6 +23,7 @@ import Switch from '@mui/material/Switch';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
+import About from "./About";
 
 function createData(name, calories, fat, carbs, protein) {
   return {
@@ -29,6 +32,7 @@ function createData(name, calories, fat, carbs, protein) {
     fat,
     carbs,
     protein,
+
   };
 }
 
@@ -191,15 +195,15 @@ function EnhancedTableToolbar(props) {
           {numSelected} selected
         </Typography>
       ) : (
-        <Typography
-          sx={{ flex: '1 1 100%' }}
-          variant="h6"
-          id="tableTitle"
-          component="div"
-        >
-          Nutrition
-        </Typography>
-      )}
+          <Typography
+            sx={{ flex: '1 1 100%' }}
+            variant="h6"
+            id="tableTitle"
+            component="div"
+          >
+            Nutrition
+          </Typography>
+        )}
 
       {numSelected > 0 ? (
         <Tooltip title="Delete">
@@ -208,12 +212,12 @@ function EnhancedTableToolbar(props) {
           </IconButton>
         </Tooltip>
       ) : (
-        <Tooltip title="Filter list">
-          <IconButton>
-            <FilterListIcon />
-          </IconButton>
-        </Tooltip>
-      )}
+          <Tooltip title="Filter list">
+            <IconButton>
+              <FilterListIcon />
+            </IconButton>
+          </Tooltip>
+        )}
     </Toolbar>
   );
 }
@@ -265,6 +269,11 @@ export default function Entries() {
     setSelected(newSelected);
   };
 
+  const nextpage = () => {
+    console.log("dhugs")
+    return (<About />)
+  }
+
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -288,6 +297,12 @@ export default function Entries() {
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
         <EnhancedTableToolbar numSelected={selected.length} />
+
+        {/* <Button onClick={nextpage} variant="outlined" color="primary">
+          <Link to="/About">
+            About Page
+    </Link>
+        </Button> */}
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}
@@ -302,6 +317,9 @@ export default function Entries() {
               onRequestSort={handleRequestSort}
               rowCount={rows.length}
             />
+
+
+
             <TableBody>
               {/* if you don't need to support IE11, you can replace the `stableSort` call with:
                  rows.sort(getComparator(order, orderBy)).slice() */}
@@ -312,6 +330,8 @@ export default function Entries() {
                   const labelId = `enhanced-table-checkbox-${index}`;
 
                   return (
+
+
                     <TableRow
                       hover
                       onClick={(event) => handleClick(event, row.name)}
@@ -321,6 +341,8 @@ export default function Entries() {
                       key={row.name}
                       selected={isItemSelected}
                     >
+
+
                       <TableCell padding="checkbox">
                         <Checkbox
                           color="primary"
@@ -329,6 +351,7 @@ export default function Entries() {
                             'aria-labelledby': labelId,
                           }}
                         />
+
                       </TableCell>
                       <TableCell
                         component="th"
@@ -342,6 +365,8 @@ export default function Entries() {
                       <TableCell align="right">{row.fat}</TableCell>
                       <TableCell align="right">{row.carbs}</TableCell>
                       <TableCell align="right">{row.protein}</TableCell>
+                      <TableCell align="right">{row.protein}</TableCell>
+
                     </TableRow>
                   );
                 })}
