@@ -23,8 +23,9 @@ import Switch from '@mui/material/Switch';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
-import About from "./About";
-
+import Addquotes from './Addquotes';
+import { Link} from "react-router-dom";
+import { Navbar } from './Navbar/Navbar';
 function createData(name, calories, fat, carbs, protein) {
   return {
     name,
@@ -269,10 +270,10 @@ export default function Entries() {
     setSelected(newSelected);
   };
 
-  const nextpage = () => {
-    console.log("dhugs")
-    return (<About />)
-  }
+  // const nextpage = () => {
+  //   console.log("dhugs")
+  //   return (<About />)
+  // }
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -297,12 +298,8 @@ export default function Entries() {
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
         <EnhancedTableToolbar numSelected={selected.length} />
-
-        {/* <Button onClick={nextpage} variant="outlined" color="primary">
-          <Link to="/About">
-            About Page
-    </Link>
-        </Button> */}
+        <Link to="/Addquotes">Add Quotes</Link>
+       
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}
