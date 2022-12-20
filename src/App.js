@@ -7,12 +7,7 @@ import Addquotes from './component/Addquotes';
 
 
 function App() {
-  const [components, setComponents] = useState(["Sample Component"]); 
-
-  function addComponent() {
-    setComponents([...components, "kishan"]) 
-    
-  } 
+  
   return (
     <div className="App">
        <Router>
