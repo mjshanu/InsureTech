@@ -40,19 +40,14 @@ function createData(name, PINTOTOP, URGENT,STATE, STATUS, SUBMISSION_ID,REQUESTE
 }
 
 const rows = [
-  createData('','','','...', 'Additional information','in Progress', 'BS37',122, 'RESIDENTAIL PRIMARY','TEST AGENCY 1','kiran','name 111',1,'kiran','...','1/2/2022-01:20 AM EST'),
-  createData('', '','','...','clearance Match', 'in Progress','BS25',123, 'RESIDENTAIL PRIMARY','TEST AGENCY 2','kishan','name 113',1, 'kishan','...','1/4/2022-01:40 AM EST'),
-  createData('', '','','...','clearance Match','Bound', 'BS16',124, 'RESIDENTAIL PRIMARY','TEST AGENCY 3','shanu','name 112',1, 'shanu','...','12/3/2022-03:40 AM EST'),
-  createData(' ', '','','...','clearance Match','in Progress',125, 'BS60','RESIDENTAIL PRIMARY','TEST AGENCY 4','shanu','name 113', 1, 'shanu','...','1/4/2022-01:40 AM EST'),
-  createData('', '','','...','clearance Match','in Progress',126, 'BS16','RESIDENTAIL PRIMARY', 'TEST AGENCY 3','kiran','name 112',1, 'kiran','...','1/4/2022-01:40 AM EST'),
-  createData('', '','','...','Binder Generation','in Progress',127, 'BS32','RESIDENTAIL PRIMARY', 'TEST AGENCY 2','kishan','name 121',1, 'kishan','...','7/6/2022-012:45 AM EST'),
+  createData('','','','...','Additional information','in Progress', 'BS37',122, 'RESIDENTAIL PRIMARY','TEST AGENCY 1','kiran','name 111',1,'kiran','...','1/2/2022-01:20 AM EST'),
+  createData('','','','...','clearance Match', 'in Progress','BS25',123, 'RESIDENTAIL PRIMARY','TEST AGENCY 2','kishan','name 113',1, 'kishan','...','1/4/2022-01:40 AM EST'),
+  createData('','','','...','clearance Match','Bound', 'BS16',124, 'RESIDENTAIL PRIMARY','TEST AGENCY 3','shanu','name 112',1, 'shanu','...','12/3/2022-03:40 AM EST'),
+  createData(' ','','','...','clearance Match','in Progress',125, 'BS60','RESIDENTAIL PRIMARY','TEST AGENCY 4','shanu','name 113', 1, 'shanu','...','1/4/2022-01:40 AM EST'),
+  createData('','','','...','clearance Match','in Progress',126, 'BS16','RESIDENTAIL PRIMARY', 'TEST AGENCY 3','kiran','name 112',1, 'kiran','...','1/4/2022-01:40 AM EST'),
+  createData('','','','...','Binder Generation','in Progress',127, 'BS32','RESIDENTAIL PRIMARY', 'TEST AGENCY 2','kishan','name 121',1, 'kishan','...','7/6/2022-012:45 AM EST'),
   createData('', '','','...','Risk Assignement','in Progress',128, 'BS90','RESIDENTAIL PRIMARY', 'TEST AGENCY 1','kishan' ,'name 113',1,'kishan','...','11/09/2022-09:40 AM EST'),
-  // createData('Jelly Bean', 375, 0.0, 94, 0.0),
-  // createData('KitKat', 518, 26.0, 65, 7.0),
-  // createData('Lollipop', 392, 0.2, 98, 0.0),
-  // createData('Marshmallow', 318, 0, 81, 2.0),
-  // createData('Nougat', 360, 19.0, 9, 37.0),
-  // createData('Oreo', 437, 18.0, 63, 4.0),
+
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -102,33 +97,33 @@ const headCells = [
     id: 'SLA_TIME',
     numeric: true,
     disablePadding: false,
-    label: 'SLA_TIME ',
+    label: 'SLA_TIME',
   },
 
   {
     id: 'ACTIONS',
     numeric: true,
     disablePadding: false,
-    label: 'ACTIONS ',
+    label: 'ACTIONS',
   },
   {
     id: 'STATE',
     numeric: false,
     disablePadding: false,
-    label: 'STATE ',
+    label: 'STATE',
   },
 
   {
     id: 'STATUS',
     numeric: false,
     disablePadding: false,
-    label: 'STATUS ',
+    label: 'STATUS',
   },
   {
     id: 'SUBMISSION',
     numeric: false,
     disablePadding: false,
-    label: 'SUBMISSION ',
+    label: 'SUBMISSION',
   },
 
   
@@ -136,7 +131,7 @@ const headCells = [
     id: 'REQUESTEDCONTRACT',
     numeric: true,
     disablePadding: false,
-    label: 'REQUESTEDCONTRACT ',
+    label: 'REQUESTEDCONTRACT',
   },
 
 
@@ -144,21 +139,21 @@ const headCells = [
     id: 'REQUESTED_PRODUCT',
     numeric: true,
     disablePadding: false,
-    label: 'REQUESTED_PRODUCT ',
+    label: 'REQUESTED_PRODUCT',
   },
 
   {
     id: 'AGENCY_NAME',
     numeric: true,
     disablePadding: false,
-    label: 'AGENCY_NAME ',
+    label: 'AGENCY_NAME',
   },
 
   {
     id: 'SUBMITORS_NAME',
     numeric: true,
     disablePadding: false,
-    label: 'SUBMITORS_NAME ',
+    label: 'SUBMITORS_NAME',
   },
 // 
 
@@ -167,21 +162,21 @@ const headCells = [
   id: 'INSURED_NAME',
   numeric: true,
   disablePadding: false,
-  label: 'INSURED_NAME ',
+  label: 'INSURED_NAME',
 },
 
 {
   id: 'PROPERTY_INSURED',
   numeric: true,
   disablePadding: false,
-  label: 'PROPERTY_INSURED ',
+  label: 'PROPERTY_INSURED',
 },
 
 {
   id: 'SUBMISSION_ASSIGNEDTO',
   numeric: true,
   disablePadding: false,
-  label: 'SUBMISSION_ASSIGNEDTO ',
+  label: 'SUBMISSION_ASSIGNEDTO',
 },
 
 
@@ -189,20 +184,15 @@ const headCells = [
   id: 'COMMENTS',
   numeric: true,
   disablePadding: false,
-  label: 'COMMENTS ',
+  label: 'COMMENTS',
 },
 
 {
   id: 'SUBMISSION_DATE_TIME',
   numeric: true,
   disablePadding: false,
-  label: 'SUBMISSION_DATE_TIME ',
+  label: 'SUBMISSION_DATE_TIME',
 },
-
-
-
-
-
 
 ];
 
@@ -388,12 +378,11 @@ export default function Entries() {
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
         <EnhancedTableToolbar numSelected={selected.length} />
-        <Link to="/Addquotes">Start Quotes</Link>
-        {/* <Link to="/ThirdNav">ThirdNav</Link> */}
-        <Link to="/ThirdNav1">ThirdNav1</Link>
-        <Link to="/SixNav1">SixNav1</Link>
+        <Link to="/Addquotes">Add Quotes</Link>
+       
 
-  
+
+       
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}
