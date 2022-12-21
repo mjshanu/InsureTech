@@ -3,7 +3,7 @@ import React from 'react'
 export default function Addquotes() {
   return (
     <div>
-<h1>create a new submission</h1>
+<h1 >create a new submission</h1>
 <form >
      
         <label >
