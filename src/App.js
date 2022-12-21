@@ -4,9 +4,11 @@ import { Link, Route, Routes ,BrowserRouter as Router,Switch,Navigate} from "rea
 import Entries from './component/Entries';
 import { Navbar } from './component/Navbar/Navbar';
 import Addquotes from './component/Addquotes';
+import ThirdNav from './component/ThirdNav';
 
 
 function App() {
+  
   return (
     <div className="App">
        <Router>
@@ -15,6 +17,8 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={< Entries/>}></Route>
                     <Route path="/Addquotes" element={<Addquotes />} />
+                    <Route path="/ThirdNav" element={<ThirdNav />} />
+
                     
                 </Routes>
             </div>
