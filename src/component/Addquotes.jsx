@@ -1,19 +1,84 @@
-import React from 'react'
+import React ,{ useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 
 import Row from 'react-bootstrap/Row';
-
+import Modal from 'react-modal';
+import Wholesalername from './Wholesalername';
+import Pagefive from './Pagefive';
+import { Link } from "react-router-dom";
 export default function Addquotes() {
+  const [isOpened, setIsOpened] = useState(false);
+  const [isModalOpen, setModalIsOpen] = useState(false);
+  const [isretailOpened, setIsretailOpened] = useState(false);
+  const [isindividualOpened, setIindividualOpened] = useState(false);
+  const [isModalmoreactionOpen, setModalmoreactionIsOpen] = useState(false);
+	
+
   const today = new Date();
 const numberOfDaysToAdd = 3;
 const date = today.setDate(today.getDate() + numberOfDaysToAdd); 
-const defaultValue = new Date(date).toISOString().split('T')[0]
+const defaultValue = new Date(date).toISOString().split('T')[0];
+function agencytype() {
+  setIsOpened(wasOpened => !wasOpened);
+}
+function retailform() {
+  setIsOpened(false);
+  setIsretailOpened(wasOpened => !wasOpened);
+}
+
+function Addindividual() {
+  setIindividualOpened(wasOpened => !wasOpened);
+}
+function closeModal()
+{
+  setModalIsOpen(false);
+}
+function moreactions()
+{
+  setModalmoreactionIsOpen(true);
+}
+function closeModalmore()
+{
+  setModalmoreactionIsOpen(false);
+}
   return (
     <div>
-      <h1>Add Quotes</h1>
+     {/* first modal*/}
+      <Modal
+        isOpen={isModalOpen}
+       
+        onRequestClose={closeModal}
+        
+        contentLabel="Example Modal"
+      >
+        <h2>Wholesalers</h2>
+        <button onClick={closeModal}>close</button>
+        <div></div>
+   <Wholesalername/>
+          
+      </Modal>
+       {/* moreaction*/}
+       <Modal
+        isOpen={isModalmoreactionOpen}
+       
+        onRequestClose={closeModalmore}
+        
+        contentLabel="Example Modal"
+      >
+       <Button >
+      Copy
+    </Button>
+    <br></br>
+        <button onClick={closeModalmore}>close</button>
+        <div></div>
+   
+          
+      </Modal>
+
+      <h1 className='m-t-20'>Add Quotes</h1>
       <div className='center-align-form' >
     <Form >
     <h3 className='h3-sty'>create a new submission</h3>
@@ -74,17 +139,61 @@ const defaultValue = new Date(date).toISOString().split('T')[0]
     </div>
 <div className='btn-agency'>
 <Form.Label>Agency type</Form.Label>
-<div className='btn-outer'>
-<Button  type="submit">
-      Wholes 
+<div className='btn-outer btn-outer1' >
+<Button  onClick={agencytype}>
+Wholesaler/broker 
     </Button>
-    <Button  type="submit">
+    <Button  onClick={retailform}>
       Retail
     </Button>
     </div>
+    
 
 </div>
-<h3  className='h3-sty'>Agency information</h3>
+
+{isOpened && (
+       <div className='btn-agency'>
+       <Form.Label>Type of account</Form.Label>
+       <div className='btn-outer btn-outer2'>
+       <Button  onClick={agencytype}>
+             Account current 
+           </Button>
+           <Button  type="submit">
+             Non account current
+           </Button>
+           </div>
+           
+       
+       </div>
+      )}
+      {isretailOpened && (
+        
+       <div>
+    <h3  className='h3-sty'>Agency information</h3>
+
+       <div className='three-column-grid agncy-sty-rev1'>
+         
+   
+       <Form.Group as={Col} controlId="formGridZip">
+           <Form.Label>Agency Name</Form.Label>
+           <Form.Control />
+         </Form.Group>
+   
+         <Form.Group as={Col} controlId="formGridZip">
+           <Form.Label>Address line</Form.Label>
+           <Form.Control />
+         </Form.Group>
+         <div className='btn-outer-agency' >
+         <Button  >
+         Search
+       </Button>
+       </div>
+      </div>
+       </div>
+   
+      )}
+       
+<h3  className='h3-sty'>Wholesaler information</h3>
     <div>
     
 
@@ -100,9 +209,9 @@ const defaultValue = new Date(date).toISOString().split('T')[0]
         <Form.Label>Address</Form.Label>
         <Form.Control />
       </Form.Group>
-      <div className='btn-outer-agency'>
-      <Button  type="submit">
-      Submit
+      <div className='btn-outer-agency'  onClick={() =>setModalIsOpen(true)}>
+      <Button  >
+      Search
     </Button>
     </div>
    </div>
@@ -138,52 +247,79 @@ const defaultValue = new Date(date).toISOString().split('T')[0]
     <div className='btn-agency'>
 <Form.Label>Inssured information</Form.Label>
 <div className='btn-outer'>
-<Button  type="submit">
+<Button onClick={Addindividual} >
       Individual
     </Button>
-    <Button  type="submit">
+    <Button  >
       Legal
     </Button>
     </div>
    
 
 </div>
+{isindividualOpened && (
+        
+        <div>
+  
+ 
+        <div className='three-column-grid agncy-sty-rev1'>
+          
+    
+        <Form.Group as={Col} controlId="formGridZip">
+            <Form.Label>First Name</Form.Label>
+            <Form.Control />
+          </Form.Group>
+    
+          <Form.Group as={Col} controlId="formGridZip">
+            <Form.Label>Middle Name</Form.Label>
+            <Form.Control />
+            
+          </Form.Group>
+          <div className='btn-outer-agency' >
+          <Button  >
+          Add Another
+        </Button>
+        </div>
+       </div>
+        </div>
+    
+       )}
 <h3  className='h3-sty'>Property issured information</h3>
     <div className="three-column-grid" >
       
       
       <Form.Group as={Col} controlId="formdate">
-        <Form.Label>Date of submission</Form.Label>
-        <Form.Control type="date" />
+      <Form.Label>Adress </Form.Label>
+            <Form.Control />
       </Form.Group>
 
       <Form.Group as={Col} controlId="formdate">
-        <Form.Label>Time of submission</Form.Label>
-        <Form.Control type="date"/>
+      <Form.Label>Building </Form.Label>
+            <Form.Control />
       </Form.Group>
       <Form.Group as={Col} controlId="formdate">
-        <Form.Label>AM/PM</Form.Label>
-        <Form.Control type="date"/>
+      <Form.Label>Country </Form.Label>
+            <Form.Control />
       </Form.Group>
      
       
 
     </div>
-    <div className="three-column-grid" >
+    <div className="three-column-grid m-b-20" >
       
       
       <Form.Group as={Col} controlId="formdate">
-        <Form.Label>Date of submission</Form.Label>
-        <Form.Control type="date" />
+      <Form.Label>City </Form.Label>
+            <Form.Control />
       </Form.Group>
 
       <Form.Group as={Col} controlId="formdate">
-        <Form.Label>Time of submission</Form.Label>
-        <Form.Control type="date"/>
+      <Form.Label>State </Form.Label>
+            <Form.Control />
       </Form.Group>
       <Form.Group as={Col} controlId="formdate">
-        <Form.Label>AM/PM</Form.Label>
-        <Form.Control type="date"/>
+      <Form.Label>Zip </Form.Label>
+            <Form.Control />
       </Form.Group>
      
       
@@ -191,8 +327,13 @@ const defaultValue = new Date(date).toISOString().split('T')[0]
     </div>
 <br></br>
     <br></br>
-    <Button variant="primary" type="submit">
+    <Link to="/pagefive">
+    <Button variant="primary">
       Submit
+    </Button>
+    </Link>
+    <Button className='m-l-15' variant="primary" onClick={moreactions}  >
+      More Actions
     </Button>
   </Form>
   </div>

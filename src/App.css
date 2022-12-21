@@ -86,15 +86,15 @@
   }
   .btn-agency button
   {
-    float:left;
+    float: left;
     background: #ffff;
-    border-radius:5px;
+    border-radius: 5px;
     color: #000;
-    border:0.5px solid #000 ;
-   text-align: center;
-    padding:10px 20px;
+    border: 0.5px solid #000;
+    text-align: center;
+    padding: 8px 15px;
     margin-left: 5px;
-    margin-right:5px
+    margin-right: 5px
   }
   .btn-outer{
     width:211px;
@@ -105,6 +105,12 @@
     padding:31px 20px;
     background: #ffff;
   }
+  .btn-outer1 {
+    width: 330px;
+    margin: 0px auto;
+    padding-left: 40px;
+
+}
   .two-column-grid{
     width: 100%;
   float: left;
@@ -117,6 +123,15 @@
   .col {
     flex: 1 0;
     text-align: left;
+}
+.m-l-15 {
+  margin-left: 15px;
+}
+.m-t-20 {
+  margin-top: 20px;
+}
+.m-b-20 {
+  margin-bottom: 20px;
 }
 .h3-sty {
   padding-top: 15px;
@@ -136,7 +151,22 @@
 .agncy-sty-rev1 {
   margin-bottom: -10px !important;
 }
-
+.btn-outer2 {
+  width: 400px;
+  margin: 0px auto;
+  padding-left: 40px;
+  
+}
+.btn-new-sty {
+  margin-right: 10px;
+  background-color: #bfdefd;
+  border: 0.5px solid #a9bfd2;
+}
+.btn-new-sty:hover {
+  margin-right: 10px;
+  background-color: #fff;
+  border: 0.5px solid #a9bfd2;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
