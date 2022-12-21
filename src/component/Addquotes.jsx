@@ -326,9 +326,10 @@ Wholesaler/broker
     </div>
 <br></br>
     <br></br>
-    <Link to="/pagefive">
+    <Link to="/Secondadd">
+
     <Button variant="primary">
-      Submit
+      Next
     </Button>
     </Link>
     <Button className='m-l-15' variant="primary" onClick={moreactions}  >

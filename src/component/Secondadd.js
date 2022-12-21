@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
+import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 
 export default function Secondadd() {
@@ -259,9 +260,13 @@ export default function Secondadd() {
 
          
     <div className='btn-agency'>
-          <Button>SAVE</Button>
+          {/* <Button>SAVE</Button> */}
+          <Link to="/Fourthadd">
           <Button>CONTINUE</Button>
+          </Link>
           <Button>MORE ACTIONS</Button>
+          <Button>BACK</Button>
+          <Button>HOME</Button>
           {/* </span> */}
           </div>
         </div>
