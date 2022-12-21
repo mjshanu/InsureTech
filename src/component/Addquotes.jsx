@@ -17,9 +17,8 @@ const defaultValue = new Date(date).toISOString().split('T')[0]
       <div className='center-align-form' >
     <Form >
     <h3 className='h3-sty'>create a new submission</h3>
-    <div className=" for-colum-grid" >
-      
-      
+    <div className="for-colum-grid" >
+
       <Form.Group as={Col} controlId="formdate">
         <Form.Label>Date of submission</Form.Label>
         <Form.Control type="" readOnly defaultValue={defaultValue}/>
