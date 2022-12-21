@@ -372,8 +372,7 @@ export default function Entries() {
       <Paper sx={{ width: '100%', mb: 2 }}>
         <EnhancedTableToolbar numSelected={selected.length} />
         <Link to="/Addquotes">Add Quotes</Link>
-        <Link to="/Secondadd">Second Quotes</Link>
-        <Link to="/Fourthadd">Fourth Quotes</Link>
+       
 
 
        
