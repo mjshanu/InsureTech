@@ -388,12 +388,12 @@ export default function Entries() {
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
         <EnhancedTableToolbar numSelected={selected.length} />
-        <Link to="/Addquotes">Add Quotes</Link>
-        <Link to="/ThirdNav">ThirdNavAdd Quotes</Link>
-        <Link to="/ThirdNav">ifthNavAdd Quotes</Link>
+        <Link to="/Addquotes">Start Quotes</Link>
+        {/* <Link to="/ThirdNav">ThirdNav</Link> */}
+        <Link to="/ThirdNav1">ThirdNav1</Link>
+        <Link to="/SixNav1">SixNav1</Link>
 
-
-       
+  
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}

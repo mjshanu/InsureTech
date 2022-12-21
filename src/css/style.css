@@ -1,0 +1,10 @@
+.for-colum-grid{
+    width: 100%;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:30px 20px;
+    margin-bottom: 25px;
+    grid-auto-rows: minmax(0px, auto);;
+    }
+    

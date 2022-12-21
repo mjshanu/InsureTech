@@ -33,6 +33,113 @@
   height: 40vmin;
   pointer-events: none;
 }
+.center-align-form{
+
+  width: 980px;
+  margin: 0px auto;
+}
+.four-colum-grid{
+  width: 100%;
+  float: left;
+}
+.for-colum-grid{
+  width: 100%;
+  float: left;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:30px 20px;
+  margin-bottom: 25px;
+  grid-auto-rows: minmax(0px, auto);
+  }
+  .three-column-grid{
+    width: 100%;
+  float: left;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:30px 20px;
+  margin-bottom: 25px;
+  grid-auto-rows: minmax(0px, auto);     
+  }
+ 
+  .selectdropdown {
+    width: 100%;
+    height: 37px
+  }
+  .urgentcheckbox
+  {
+    margin-top:37px;
+
+  }
+  .urgentcheckbox label
+  {
+    padding-right: 10px;
+  }
+  .btn-agency
+  {
+    float:left;
+    width:100%;
+    margin-bottom: 25px; 
+  }
+  .btn-agency label
+  {
+    float:left;
+    width:100%
+  }
+  .btn-agency button
+  {
+    float:left;
+    background: #ffff;
+    border-radius:5px;
+    color: #000;
+    border:0.5px solid #000 ;
+   text-align: center;
+    padding:10px 20px;
+    margin-left: 5px;
+    margin-right:5px
+  }
+  .btn-outer{
+    width:211px;
+    margin:0px auto;
+  }
+  .btn-outer-agency{
+    width:211px; 
+    padding:31px 20px;
+    background: #ffff;
+    padding-left: 20%;
+    
+  }
+  .two-column-grid{
+    width: 100%;
+  float: left;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:30px 20px;
+  margin-bottom: 25px;
+  grid-auto-rows: minmax(0px, auto);
+  }
+  .col {
+    flex: 1 0;
+    text-align: left;
+}
+.h3-sty {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+}
+
+.btn:hover {
+  color: #000 !important;
+  background-color:#fff !important;
+  border-color: #000 !important;
+}
+.agncy-sty-revrs {
+  margin-top: -15px !important;
+  padding-bottom: 15px;
+}
+
+.agncy-sty-rev1 {
+  margin-bottom: -10px !important;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -65,3 +172,45 @@
 }
 
 /* asa */
+
+.def{
+  background-color: #afafaf;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 10px 24px;
+  height: 44px;
+  
+}
+.def2{
+  background-color: #030303;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 10px 24px;
+  height: 44px;
+  
+  
+}
+
+.-column-grid{
+  width: 100%;
+float: left;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap:30px 20px;
+margin-bottom: 25px;
+grid-auto-rows: minmax(0px, auto);     
+}
