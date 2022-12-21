@@ -381,7 +381,7 @@ export default function Entries() {
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
         <EnhancedTableToolbar numSelected={selected.length} />
-        <Link to="/Addquotes">Add Quotes</Link>
+        <Link to="/Addquotes">Start Quotes</Link>
        
         <TableContainer>
           <Table

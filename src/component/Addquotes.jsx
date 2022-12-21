@@ -1,142 +1,201 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.css';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+
+import Row from 'react-bootstrap/Row';
 
 export default function Addquotes() {
+  const today = new Date();
+const numberOfDaysToAdd = 3;
+const date = today.setDate(today.getDate() + numberOfDaysToAdd); 
+const defaultValue = new Date(date).toISOString().split('T')[0]
   return (
     <div>
-<h1>create a new submission</h1>
-<form >
-     
-        <label >
-          Date of submission:
-        </label>
-        <input type="date"  />
-         
-        <label >
-          Time of submission:
-        </label>
-        <input type="date" />
-           
-        <label>
-          AM/PM:
-        </label>
-        <select>
+      <h1>Add Quotes</h1>
+      <div className='center-align-form' >
+    <Form >
+    <h3 className='h3-sty'>create a new submission</h3>
+    <div className=" for-colum-grid" >
+      
+      
+      <Form.Group as={Col} controlId="formdate">
+        <Form.Label>Date of submission</Form.Label>
+        <Form.Control type="" readOnly defaultValue={defaultValue}/>
+      </Form.Group>
+
+      <Form.Group as={Col} controlId="formdate">
+        <Form.Label>Time of submission</Form.Label>
+        <Form.Control type="date"/>
+      </Form.Group>
+      <Form.Group as={Col} controlId="formdate">
+        <Form.Label>AM/PM</Form.Label>
+        <select className='selectdropdown'>
           <option value="">AM</option>
           <option value="">PM</option>
-        </select>
-        <br></br>
-        <br></br>
-       <h1>Requested Contract and Products</h1>  
-       <div >
-        <label>contract</label>
-        <br></br>
-       <select>
-          <option value="">select</option>
-          
-        </select>
-        </div>
-        <div>
-        <br></br>
-        <label>product</label>
-        <br></br>
-        <select>
-          <option value="">select</option>
-          
-        </select>
-        </div>
-        <div>
-        <br></br>
-        <label>Marketing Referal</label>
-        <br></br>
-        <select>
-          <option value="">None</option>
-          
-        </select>
-</div>
-<h5>Agency Information</h5>
-
-<div>
-  <label>Agency Mapping</label>
-  <span style={{paddingLeft: '20px'}}>
-  <button>
-       Agency
-      </button>
-      </span>
-      <span style={{paddingLeft: '20px'}}>
-      <button>
-       Agency
-      </button>
-      </span>
-</div>
-<div>
-<h1>Agency Information</h1>
-<label>Agency</label>
-<input type="text"/>
-<label>Agency</label>
-<input type="text"/>
-<button>
-       Search
-      </button>
-
-</div>
-<div><h1>Contact Information</h1>
-<lable>Secondary name</lable>
-<input type="text"/>
-<br></br>
-<br></br>
-<lable>email</lable>
-<input type="text"/>
-<span style={{paddingLeft: '20px'}}>
-<lable>phone</lable>
-<input type="text"/>
-</span>
-
-
-</div>
-<h5>Insured Information</h5>
-
-<div>
-  <label>Agency Mapping</label>
-  <span style={{paddingLeft: '20px'}}>
-  <button>
-       Individual
-      </button>
-      </span>
-      <span style={{paddingLeft: '20px'}}>
-      <button>
-       Legal family
-      </button>
-      </span>
-</div>
-<div><h1>Property Insured Information</h1>
-<span style={{paddingLeft: '20px'}}>
-<lable>Address</lable>
-<input type="text"/>
-</span>
-<span style={{paddingLeft: '20px'}}>
-<lable>Building</lable>
-<input type="text"/>
-
-<lable>phone</lable>
-<input type="text"/>
-</span>
-<br></br>
-<span style={{paddingLeft: '20px'}}>
-<lable>City</lable>
-<input type="text"/>
-</span>
-<span style={{paddingLeft: '20px'}}>
-<lable>State</lable>
-<input type="text"/>
-
-<lable>Zip</lable>
-<input type="text"/>
-</span>
-<br></br>
-<button>Submit</button>
-
-</div>
-      </form>
+          </select>
+      </Form.Group>
+      <Form.Group as={Col} controlId="formdate" className='urgentcheckbox'>
+      <Form.Label>urgent</Form.Label>
+      <input type="checkbox" id="urgent" name="urgentcheck" value="1"></input>
+      </Form.Group>
 
     </div>
+    <h3  className='h3-sty'>Requested contract and product</h3>
+    <div className='three-column-grid'>
+      
+      <Form.Group as={Col} controlId="formGridState">
+        <Form.Label>Contract</Form.Label>
+        <Form.Select defaultValue="Choose...">
+          <option>Select</option>
+          <option value="232">232</option>
+          <option value="946">946</option>
+          <option value="966">966</option>
+          <option value="1136">1136</option>
+          <option value="PHLY">PHLY</option>
+          <option value="UW Serivice">UW SERVICE BROKER</option>
+        </Form.Select>
+      </Form.Group>
+      <Form.Group as={Col} controlId="formGridState">
+        <Form.Label>Product</Form.Label>
+        <Form.Select defaultValue="Choose...">
+          <option>Select</option>
+          <option>...</option>
+        </Form.Select>
+      </Form.Group>
+      <Form.Group as={Col} controlId="formGridState">
+        <Form.Label>Marketing refferal</Form.Label>
+        <Form.Select defaultValue="Choose...">
+          <option>Select</option>
+          <option>...</option>
+        </Form.Select>
+      </Form.Group>
+    </div>
+<div className='btn-agency'>
+<Form.Label>Agency type</Form.Label>
+<div className='btn-outer'>
+<Button  type="submit">
+      Wholes 
+    </Button>
+    <Button  type="submit">
+      Retail
+    </Button>
+    </div>
+
+</div>
+<h3  className='h3-sty'>Agency information</h3>
+    <div>
+    
+
+    <div className='three-column-grid agncy-sty-rev1'>
+      
+
+    <Form.Group as={Col} controlId="formGridZip">
+        <Form.Label>Wholesaler Name</Form.Label>
+        <Form.Control />
+      </Form.Group>
+
+      <Form.Group as={Col} controlId="formGridZip">
+        <Form.Label>Address</Form.Label>
+        <Form.Control />
+      </Form.Group>
+      <div className='btn-outer-agency'>
+      <Button  type="submit">
+      Submit
+    </Button>
+    </div>
+   </div>
+    </div>
+
+    <h3  className='agncy-sty-revrs'>Contact information</h3>
+    <div className='two-column-grid'>
+      
+      <Form.Group as={Col} controlId="formGridState">
+      <Form.Label>Submitters Name</Form.Label>
+        <Form.Control />
+      </Form.Group>
+      <Form.Group as={Col} controlId="formGridState">
+      <Form.Label>Email</Form.Label>
+        <Form.Control />
+      </Form.Group>
+      
+    </div>
+    <div className='two-column-grid'>
+      
+      <Form.Group as={Col} controlId="formGridState">
+      <Form.Label>Phone</Form.Label>
+        <Form.Control />
+      </Form.Group>
+      <Form.Group as={Col} controlId="formGridState">
+        <Form.Label>State</Form.Label>
+        <Form.Label>Email</Form.Label>
+        <Form.Control />
+      </Form.Group>
+      
+    </div>
+    
+    <div className='btn-agency'>
+<Form.Label>Inssured information</Form.Label>
+<div className='btn-outer'>
+<Button  type="submit">
+      Individual
+    </Button>
+    <Button  type="submit">
+      Legal
+    </Button>
+    </div>
+   
+
+</div>
+<h3  className='h3-sty'>Property issured information</h3>
+    <div className="three-column-grid" >
+      
+      
+      <Form.Group as={Col} controlId="formdate">
+        <Form.Label>Date of submission</Form.Label>
+        <Form.Control type="date" />
+      </Form.Group>
+
+      <Form.Group as={Col} controlId="formdate">
+        <Form.Label>Time of submission</Form.Label>
+        <Form.Control type="date"/>
+      </Form.Group>
+      <Form.Group as={Col} controlId="formdate">
+        <Form.Label>AM/PM</Form.Label>
+        <Form.Control type="date"/>
+      </Form.Group>
+     
+      
+
+    </div>
+    <div className="three-column-grid" >
+      
+      
+      <Form.Group as={Col} controlId="formdate">
+        <Form.Label>Date of submission</Form.Label>
+        <Form.Control type="date" />
+      </Form.Group>
+
+      <Form.Group as={Col} controlId="formdate">
+        <Form.Label>Time of submission</Form.Label>
+        <Form.Control type="date"/>
+      </Form.Group>
+      <Form.Group as={Col} controlId="formdate">
+        <Form.Label>AM/PM</Form.Label>
+        <Form.Control type="date"/>
+      </Form.Group>
+     
+      
+
+    </div>
+<br></br>
+    <br></br>
+    <Button variant="primary" type="submit">
+      Submit
+    </Button>
+  </Form>
+  </div>
+  </div>
   )
 }
