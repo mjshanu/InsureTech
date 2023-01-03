@@ -22,7 +22,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import { Link } from "react-router-dom";
-function createData(name, PINTOTOP, URGENT,STATE, STATUS, SUBMISSION_ID,REQUESTEDCONTRACT,SLA_TIME,ACTIONS,REQUESTED_PRODUCT,AGENCY_NAME,SUBMITORS_NAME,INSURED_NAME,PROPERTY_INSURED,SUBMISSION_ASSIGNEDTO,COMMENTS,SUBMISSION_DATE_TIME) {
+function createData(name,,vmmb mgkvb,mglkvb,fglvg jfivḍūcvrd PINTOTOP, URGENT,STATE, STATUS, SUBMISSION_ID,REQUESTEDCONTRACT,SLA_TIME,ACTIONS,REQUESTED_PRODUCT,AGENCY_NAME,SUBMITORS_NAME,INSURED_NAME,PROPERTY_INSURED,SUBMISSION_ASSIGNEDTO,COMMENTS,SUBMISSION_DATE_TIME) {
   return {
     name,
     PINTOTOP,
