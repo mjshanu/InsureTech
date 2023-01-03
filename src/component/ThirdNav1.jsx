@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
+import { Link } from "react-router-dom";
 
 
 import Table from '@mui/material/Table';
@@ -84,8 +85,9 @@ const defaultValue = new Date(date).toISOString().split('T')[0]
     <h3  className='h3-sty'>Add Additional Interest</h3>
     <div className='three-column-grid'>
     
-
+    <div className='btn-agency'>
       <button className="def2" disabled >ADD ADDITIONAL INTEREST</button> 
+    </div>
       <Form.Group as={Col} controlId="formGridZip">
         <table></table>
       </Form.Group>
@@ -143,8 +145,10 @@ const defaultValue = new Date(date).toISOString().split('T')[0]
      <Form.Control />
    </Form.Group>
 
-   
-     <button className='def' disabled>ADD</button>
+   <div className='btn-agency'>
+   <button className='def' disabled>ADD</button>
+   </div>
+     
      
   
 </div>
@@ -254,8 +258,10 @@ const defaultValue = new Date(date).toISOString().split('T')[0]
   <Form.Control />
 </Form.Group>
 
+<div className='btn-agency'>
+<button className='def' disabled>ADD</button>
 
-  <button className='def' disabled>ADD</button>
+</div>
   
 
 </div>
@@ -308,10 +314,15 @@ const defaultValue = new Date(date).toISOString().split('T')[0]
     <br></br>
     <br></br>
     <div className='btn-agency'>
-
-<Button>SAVE</Button>
-
+<Link to="/Fourthadd">
 <Button>CONTINUE</Button>
+</Link>
+<Link to="/">
+          <Button>HOME</Button>
+          </Link>
+<Link to="/Secondadd">
+<Button>BACK</Button>
+</Link>
 
 
 

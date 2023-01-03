@@ -81,10 +81,9 @@ function closeModalmore()
       <h1 className='m-t-20'>Add Quotes</h1>
       <div className='center-align-form' >
     <Form >
-    <h3 className='h3-sty'>Create a New Submission</h3>
-    <div className=" for-colum-grid" >
-      
-      
+    <h3 className='h3-sty'>create a new submission</h3>
+    <div className="for-colum-grid" >
+
       <Form.Group as={Col} controlId="formdate">
         <Form.Label>Date of submission</Form.Label>
         <Form.Control type="" readOnly defaultValue={defaultValue}/>
@@ -329,14 +328,17 @@ Wholesaler/broker
     </div>
 <br></br>
     <br></br>
-    <Link to="/pagefive">
+    <div className='btn-agency'>
+    <Link to="/Secondadd">
+
     <Button variant="primary">
-      Submit
+      Next
     </Button>
     </Link>
     <Button className='m-l-15' variant="primary" onClick={moreactions}  >
       More Actions
     </Button>
+    </div>
   </Form>
   </div>
   </div>

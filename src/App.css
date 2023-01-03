@@ -26,7 +26,7 @@
 
 
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -79,6 +79,7 @@
     float:left;
     width:100%;
     margin-bottom: 25px; 
+    padding: 9px 12px;
   }
   .btn-agency label
   {
@@ -192,6 +193,34 @@
   color: #61dafb;
 }
 
+
+.defbut{
+
+  background-color: #110f0f;
+
+  border: none;
+
+  color: white;
+
+  /* padding: 153px 332px; */
+
+  text-align: right;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  font-size: 16px;
+
+  margin: 4px 2px;
+
+  cursor: pointer;
+
+  padding: 9px 94px;
+
+  
+
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -204,9 +233,9 @@
 /* asa */
 
 .def{
-  background-color: #afafaf;
+  background-color: white;
   border: none;
-  color: white;
+  color: black;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -216,7 +245,8 @@
   cursor: pointer;
   padding: 10px 24px;
   height: 44px;
-  
+  border-color: black;
+  border-width: 25px;
 }
 .def2{
   background-color: #030303;

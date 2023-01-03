@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
+import { Link } from "react-router-dom";
 
 import Row from 'react-bootstrap/Row';
 
@@ -20,7 +21,9 @@ export default function SixNav1() {
 
 
                         <Form.Group as={Col} controlId="formdate">
+                        <div className='btn-agency'>
                             <button className='def' disabled>VIEW COMPARE QUOTE</button>
+                        </div>
                         </Form.Group>
 
 
@@ -265,13 +268,27 @@ export default function SixNav1() {
                         </Form.Group>
 
                     </div>
-                    <div className='for-colum-grid'>
-                    <button className='def' disabled>SAVE</button>
-                    <button className='def' disabled>CALCULATE TAXES</button>
-                    <button className='def' disabled>CONTINUE</button>
-                    <button className='def'disabled>MORE ACTIONS</button>
+               <div className='btn-agency'>
 
-                    </div>
+                    
+                    <Link to="/pagefive">
+                    <Button className='btn-new-sty'>
+                    BACK
+                    </Button>
+                        
+                   
+                    </Link>
+                    <Link to="/">
+                    <Button className='btn-new-sty'>
+                    Home
+                    </Button>
+                    </Link>
+                  
+                    <Button className='btn-new-sty'>CONTINUE</Button>
+                   
+                    <Button className='btn-new-sty'>MORE ACTIONS</Button>
+                </div>
+
 
 
   
