@@ -43,16 +43,7 @@ export default function Pagefive() {
         
     <h3 className='h3-sty'>Mandatory information</h3>
     <h6>Property Details</h6>
-    <Link to="/">
-    <Button className='btn-new-sty'>
-      Home Page
-    </Button>
-    </Link>
-    <Link to="/Addquotes">
-    <Button className='btn-new-sty'>
-      Back
-    </Button>
-    </Link>
+    
     <Button onClick={editProperty}>EDIT</Button>
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -308,6 +299,27 @@ export default function Pagefive() {
    
           
       </Modal>
+      <br></br>
+      <div>
+      <div className='btn-agency'>
+      <Link to="/SixPage">
+    <Button className='btn-new-sty'>
+      Continue
+    </Button>
+    </Link>
+
+      <Link to="/">
+    <Button className='btn-new-sty'>
+      Home Page
+    </Button>
+    </Link>
+    <Link to="/Fourthadd">
+    <Button className='btn-new-sty'>
+      Back
+    </Button>
+    </Link>
+    </div>
+    </div>
       
   </Form>
   </div>

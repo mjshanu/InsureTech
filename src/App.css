@@ -26,7 +26,8 @@
 
 
 .App {
-  text-align: center;
+  text-align: left;
+  
 }
 
 .App-logo {
@@ -60,6 +61,7 @@
   margin-bottom: 25px;
   grid-auto-rows: minmax(0px, auto);     
   }
+ 
   .selectdropdown {
     width: 100%;
     height: 37px
@@ -78,6 +80,7 @@
     float:left;
     width:100%;
     margin-bottom: 25px; 
+    padding: 9px 12px;
   }
   .btn-agency label
   {
@@ -104,6 +107,8 @@
     width:211px; 
     padding:31px 20px;
     background: #ffff;
+    padding-left: 20%;
+    
   }
   .btn-outer1 {
     width: 330px;
@@ -136,6 +141,7 @@
 .h3-sty {
   padding-top: 15px;
   padding-bottom: 15px;
+  text-align: left;
 }
 
 .btn:hover {
@@ -188,6 +194,34 @@
   color: #61dafb;
 }
 
+
+.defbut{
+
+  background-color: #110f0f;
+
+  border: none;
+
+  color: white;
+
+  /* padding: 153px 332px; */
+
+  text-align: right;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  font-size: 16px;
+
+  margin: 4px 2px;
+
+  cursor: pointer;
+
+  padding: 9px 94px;
+
+  
+
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -195,4 +229,49 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* asa */
+
+.def{
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 10px 24px;
+  height: 44px;
+  border-color: black;
+  border-width: 25px;
+}
+.def2{
+  background-color: #030303;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 10px 24px;
+  height: 44px;
+  
+  
+}
+
+.-column-grid{
+  width: 100%;
+float: left;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap:30px 20px;
+margin-bottom: 25px;
+grid-auto-rows: minmax(0px, auto);     
 }

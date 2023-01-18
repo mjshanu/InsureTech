@@ -24,7 +24,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import { Link } from "react-router-dom";
-import Bpmn from './Bpmn/Bpmn';
 function createData( URGENT, STATUS,REQUESTEDCONTRACT,SLA_TIME,ACTIONS,REQUESTED_PRODUCT,AGENCY_NAME,SUBMITORS_NAME,INSURED_NAME,PROPERTY_INSURED,SUBMISSION_ASSIGNEDTO,COMMENTS,SUBMISSION_DATE_TIME) {
   return {
     
@@ -389,13 +388,117 @@ export default function Entries() {
         <EnhancedTableToolbar numSelected={selected.length} />
         <Link to="/Addquotes">Start Quotes</Link>
         {/* <Link to="/ThirdNav">ThirdNav</Link> */}
-        <br></br>
-        <Link to="/bpmn">BPNM</Link>
+        
 
   
-        
+        <TableContainer>
+          <Table
+            sx={{ minWidth: 750 }}
+            aria-labelledby="tableTitle"
+            size={dense ? 'small' : 'medium'}
+          >
+            <EnhancedTableHead
+              numSelected={selected.length}
+              order={order}
+              orderBy={orderBy}
+              onSelectAllClick={handleSelectAllClick}
+              onRequestSort={handleRequestSort}
+              rowCount={rows.length}
+            />
+
+
+
+            <TableBody>
+              {/* if you don't need to support IE11, you can replace the `stableSort` call with:
+                 rows.sort(getComparator(order, orderBy)).slice() */}
+              {stableSort(rows, getComparator(order, orderBy))
+                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                .map((row, index) => {
+                  const isItemSelected = isSelected(row.name);
+                  const labelId = `enhanced-table-checkbox-${index}`;
+
+                  return (
+
+
+                    <TableRow
+                      hover
+                      onClick={(event) => handleClick(event, row.name)}
+                      role="checkbox"
+                      aria-checked={isItemSelected}
+                      tabIndex={-1}
+                      key={row.name}
+                      selected={isItemSelected}
+                    >
+
+
+                      <TableCell padding="checkbox">
+                        <Checkbox
+                          color="primary"
+                          checked={isItemSelected}
+                          inputProps={{
+                            'aria-labelledby': labelId,
+                          }}
+                        />
+
+                      </TableCell>
+                      {/* <TableCell
+                        component="th"
+                        id={labelId}
+                        scope="row"
+                        padding="none"
+                      >
+                        {row.name}
+                      // </TableCell> */}
+                      // <TableCell align="right">{row.PINTOTOP}</TableCell> 
+                      // <TableCell align="right">{row.URGENT}</TableCell>
+
+                      //  {/* <TableCell align="right">{row.STATE}</TableCell> */}
+                      // {/* <TableCell align="right">{row.STATUS}</TableCell> */}
+                      // {/* <TableCell align="right">{row.SUBMISSION}</TableCell>
+                      <TableCell align="right">{row.REQUESTEDCONTRACT}</TableCell>
+
+                       {/* <TableCell align="right">{row.SLA_TIME}</TableCell> */}
+                      {/* <TableCell align="right">{row.ACTIONS}</TableCell> */}
+                      {/* <TableCell align="right">{row.REQUESTED_PRODUCT}</TableCell>
+                      <TableCell align="right">{row.AGENCY_NAME}</TableCell> */}
+
+                      <TableCell align="right">{row.SUBMITORS_NAME}</TableCell>
+                       <TableCell align="right">{row.INSURED_NAME}</TableCell>
+                      <TableCell align="right">{row.PROPERTY_INSURED}</TableCell>
+                      <TableCell align="right">{row.SUBMISSION_ASSIGNEDTO}</TableCell>
+                      <TableCell align="right">{row.COMMENTS}</TableCell>
+                      <TableCell align="right">{row.SUBMISSION_DATE_TIME}</TableCell>
+
+                   
+                    </TableRow>
+                  );
+                })}
+              {emptyRows > 0 && (
+                <TableRow
+                  style={{
+                    height: (dense ? 33 : 53) * emptyRows,
+                  }}
+                >
+                  <TableCell colSpan={6} />
+                </TableRow>
+              )}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <TablePagination
+          rowsPerPageOptions={[5, 10, 25]}
+          component="div"
+          count={rows.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+        />
       </Paper>
-     
+      <FormControlLabel
+        control={<Switch checked={dense} onChange={handleChangeDense} />}
+        label="Dense padding"
+      />
     </Box>
   );
 }

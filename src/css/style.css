@@ -7,4 +7,7 @@
     margin-bottom: 25px;
     grid-auto-rows: minmax(0px, auto);;
     }
-    
+    .App {
+        font-family: sans-serif;
+        text-align: center;
+      }

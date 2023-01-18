@@ -82,9 +82,8 @@ function closeModalmore()
       <div className='center-align-form' >
     <Form >
     <h3 className='h3-sty'>create a new submission</h3>
-    <div className=" for-colum-grid" >
-      
-      
+    <div className="for-colum-grid" >
+
       <Form.Group as={Col} controlId="formdate">
         <Form.Label>Date of submission</Form.Label>
         <Form.Control type="" readOnly defaultValue={defaultValue}/>
@@ -107,7 +106,7 @@ function closeModalmore()
       </Form.Group>
 
     </div>
-    <h3  className='h3-sty'>Requested contract and product</h3>
+    <h3  className='h3-sty'>Requested Contract and Product</h3>
     <div className='three-column-grid'>
       
       <Form.Group as={Col} controlId="formGridState">
@@ -122,6 +121,7 @@ function closeModalmore()
           <option value="UW Serivice">UW SERVICE BROKER</option>
         </Form.Select>
       </Form.Group>
+      <br></br>
       <Form.Group as={Col} controlId="formGridState">
         <Form.Label>Product</Form.Label>
         <Form.Select defaultValue="Choose...">
@@ -201,12 +201,12 @@ Wholesaler/broker
       
 
     <Form.Group as={Col} controlId="formGridZip">
-        <Form.Label>Wholesaler Name</Form.Label>
+        <Form.Label>Agency Name</Form.Label>
         <Form.Control />
       </Form.Group>
 
       <Form.Group as={Col} controlId="formGridZip">
-        <Form.Label>Address</Form.Label>
+        <Form.Label>Address Line 1</Form.Label>
         <Form.Control />
       </Form.Group>
       <div className='btn-outer-agency'  onClick={() =>setModalIsOpen(true)}>
@@ -216,6 +216,7 @@ Wholesaler/broker
     </div>
    </div>
     </div>
+    
 
     <h3  className='agncy-sty-revrs'>Contact information</h3>
     <div className='two-column-grid'>
@@ -327,14 +328,17 @@ Wholesaler/broker
     </div>
 <br></br>
     <br></br>
-    <Link to="/pagefive">
+    <div className='btn-agency'>
+    <Link to="/Secondadd">
+
     <Button variant="primary">
-      Submit
+      Next
     </Button>
     </Link>
     <Button className='m-l-15' variant="primary" onClick={moreactions}  >
       More Actions
     </Button>
+    </div>
   </Form>
   </div>
   </div>
